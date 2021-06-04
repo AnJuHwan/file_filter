@@ -91,6 +91,7 @@ function isDuplicatedFile(files, file) {
 
 // 파일 이동
 function move(file, targetDir) {
+  console.info(`move ${file} to ${path.basename(targetDir)}`);
   const oldPath = path.join(workingDir, file);
   const newPath = path.join(targetDir, file);
   fs.promises
